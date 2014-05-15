@@ -1,0 +1,15 @@
+{
+  "name": "fh-app",
+  "version": "0.1.0",
+  "dependencies" : { 
+    "geo" : "0.0.3",
+    "fh-webapp" : "*",
+    "fh-nodeapp": "*",
+    "fh-api" : "*",
+    "mysql" : "2.0.0-alpha8",
+    "libxmljs" : "0.8.1",
+    "express" : "3.3.4",
+    "xml2js" : "0.1.14",
+    "async" : "*"
+  }
+}
