@@ -9,17 +9,31 @@ call which will return the remote config.
 $fh.ready(function() {
   document.getElementById('submit_button').onclick = function() {
 
-    alert("About to send.");
+//take a photo using $fh.cam and then upload it to a server
+$fh.cam({
+  act: "picture",
+  uri: true
+}, function(data) {
+  if (data.uri) {
+    console.log('Filepath is ' + data.uri);
+    displayAlert(data.uri);
 
-    $fh.send({
-    to: 'brian.dooley@feedhenry.com',
-    cc: 'donal.mcgee@gmail.com',
-    subject: 'Hi There',
-    body: 'This is a message.'
-  }, function() {
-    alert("message sent.");
-  }, function(msg, err) {
-    alert("Send failed. Error is " + msg);
-  });
+/*
+    $fh.file({
+      act: "upload",
+      filepath: data.uri,
+      server: "http://example.com/upload"
+    }, function(res) {
+      console.log("File uploaded");
+    }, function(err) {
+      console.log("Failed to upload file. Error : " + err);
+    });
+*/
+  }
+})
+
+displayAlert = function(message) {
+  alert(message);
+}
 };
 });
