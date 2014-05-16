@@ -18,7 +18,7 @@ $fh.cam({
     console.log('Filepath is ' + data.uri);
     displayAlert(data.uri);
 
-/*
+
     $fh.file({
       act: "upload",
       filepath: data.uri,
@@ -28,7 +28,7 @@ $fh.cam({
     }, function(err) {
       console.log("Failed to upload file. Error : " + err);
     });
-*/
+
   }
 })
 
