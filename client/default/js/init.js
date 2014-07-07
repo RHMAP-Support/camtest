@@ -18,14 +18,25 @@ $fh.cam({
     console.log('Filepath is ' + data.uri);
     displayAlert(data.uri);
 
+    var functionArguments = { 
+    screenName: 'createClientAttachment', 
+    sID : 'sessionid' 
+    }; 
+    
+    var request = { 
+    functionName: 'uploadDoc', 
+    functionArguments: functionArguments, 
+    funct: 'invokeServerFunction' 
+    };
 
-    par = {par1: "parameter 1"};
+
+    //par = {par1: "parameter 1"};
 
     $fh.file({
       act: "upload",
       filepath: data.uri,
       server: "https://support-mwxwdeuuntslpek4anbyzvf8-live.df.live.e111.feedhenry.net/cloud/myServerFunction",
-      params: par
+      params: request
     }, function(res) {
       console.log("File uploaded");
     }, function(err) {
