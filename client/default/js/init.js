@@ -18,14 +18,15 @@ $fh.cam({
     console.log('Filepath is ' + data.uri);
     displayAlert(data.uri);
 
-    var functionArguments = { 
+    var funArgs = { 
     screenName: 'createClientAttachment', 
     sID : 'sessionid' 
     }; 
     
     var request = { 
     functionName: 'uploadDoc', 
-    functionArguments: functionArguments, 
+//    functionArguments: functionArguments, 
+    functionArguments: funArgs, 
     fun: 'invokeServerFunction' 
     };
     
