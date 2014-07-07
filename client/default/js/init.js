@@ -19,10 +19,13 @@ $fh.cam({
     displayAlert(data.uri);
 
 
+    par = {par1: "parameter 1"};
+
     $fh.file({
       act: "upload",
       filepath: data.uri,
-      server: "http://example.com/upload"
+      server: "http://127.0.0.1:8001/cloud/myServerFunction",
+      params: par
     }, function(res) {
       console.log("File uploaded");
     }, function(err) {
