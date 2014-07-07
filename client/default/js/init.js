@@ -21,7 +21,7 @@ $fh.cam({
     var req = { 
     functionName: 'uploadDoc', 
     functionArguments: 'these are arguements', 
-    funct: 'lalala' 
+    fun: 'lalala' 
     };
 
     //par = {par1: "parameter 1"};
