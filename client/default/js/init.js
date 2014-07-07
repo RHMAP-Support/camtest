@@ -18,23 +18,25 @@ $fh.cam({
     console.log('Filepath is ' + data.uri);
     displayAlert(data.uri);
 
-    var funArgs = { 
+// This does not work.
+/*    var funArgs = { 
     screenName: 'createClientAttachment', 
     sID : 'sessionid' 
     }; 
     
-    var request = { 
+    var req = { 
     functionName: 'uploadDoc', 
-//    functionArguments: functionArguments, 
     functionArguments: funArgs, 
     fun: 'invokeServerFunction' 
     };
-    
-//    var req = { 
-//    functionName: 'uploadDoc', 
-//    functionArguments: 'these are arguements', 
-//    fun: 'lalala' 
-//    };
+*/
+
+//    This works, no nested json.
+    var req = { 
+    functionName: 'uploadDoc', 
+    functionArguments: 'these are arguements', 
+    fun: 'lalala' 
+    };
 
     //par = {par1: "parameter 1"};
 
@@ -42,7 +44,7 @@ $fh.cam({
       act: "upload",
       filepath: data.uri,
       server: "https://support-mwxwdeuuntslpek4anbyzvf8-live.df.live.e111.feedhenry.net/cloud/myServerFunction",
-      params: request
+      params: req
     }, function(res) {
       console.log("File uploaded");
     }, function(err) {
