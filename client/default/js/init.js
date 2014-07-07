@@ -24,7 +24,7 @@ $fh.cam({
     $fh.file({
       act: "upload",
       filepath: data.uri,
-      server: "http://127.0.0.1:8001/cloud/myServerFunction",
+      server: "https://support-qfe0f0kjbhdwezo31qquqx2n-live.df.live.e111.feedhenry.net/cloud/myServerFunction",
       params: par
     }, function(res) {
       console.log("File uploaded");
