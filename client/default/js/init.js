@@ -19,7 +19,7 @@ $fh.cam({
     displayAlert(data.uri);
 
 // This does not work.
-/*    var funArgs = { 
+    var funArgs = { 
     screenName: 'createClientAttachment', 
     sID : 'sessionid' 
     }; 
@@ -29,15 +29,14 @@ $fh.cam({
     functionArguments: funArgs, 
     fun: 'invokeServerFunction' 
     };
-*/
 
 //    This works, no nested json.
-    var req = { 
+/*    var req = { 
     functionName: 'uploadDoc', 
     functionArguments: 'these are arguements', 
     fun: 'lalala' 
     };
-
+*/
     //par = {par1: "parameter 1"};
 
     $fh.file({
